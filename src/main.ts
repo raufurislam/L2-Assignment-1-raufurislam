@@ -140,7 +140,19 @@ processValue("hello"); // Output: 5
 processValue(10);      // Output: 20
  */
 
-function processValue(value: string | number): number;
+function processValue(value: string | number): number {
+  if (typeof value === "string") {
+    const stringLength = value.length;
+    console.log(stringLength);
+    return stringLength;
+  } else {
+    const doubleNum = value * 2;
+    console.log(doubleNum);
+    return doubleNum;
+  }
+}
+// processValue("hello");
+// processValue(10);
 
 /**
  * Problem 6:
