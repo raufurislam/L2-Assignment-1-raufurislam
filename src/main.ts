@@ -43,9 +43,9 @@ filterByRating(books);
 function filterByRating(
   items: { title: string; rating: number }[]
 ): { title: string; rating: number }[] {
-  const filtered = items.filter((item) => item.rating >= 4);
-  console.log(filtered);
-  return filtered;
+  const filterByRating = items.filter((item) => item.rating >= 4);
+  console.log(filterByRating);
+  return filterByRating;
 }
 
 // const books = [
@@ -90,6 +90,41 @@ myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
 myCar.getModel();  // Output: "Model: Corolla"
  */
 
+class Vehicle {
+  private make: string;
+  private year: number;
+
+  constructor(make: string, year: number) {
+    this.make = make;
+    this.year = year;
+  }
+
+  getInfo(): string {
+    const getInfo = `Make: ${this.make}, Year: ${this.year}`;
+    console.log(getInfo);
+    return getInfo;
+  }
+}
+
+class Car extends Vehicle {
+  model: string;
+
+  constructor(make: string, year: number, model: string) {
+    super(make, year);
+    this.model = model;
+  }
+
+  getModel(): string {
+    const getModel = `Model: ${this.model}`;
+    console.log(getModel);
+    return getModel;
+  }
+}
+
+// const myCar = new Car("Toyota", 2020, "Corolla");
+// myCar.getInfo();
+// myCar.getModel();
+
 /**
  * Problem 5:
 Description: Write a function that takes a string | number and returns:
@@ -104,6 +139,8 @@ Example:
 processValue("hello"); // Output: 5
 processValue(10);      // Output: 20
  */
+
+function processValue(value: string | number): number;
 
 /**
  * Problem 6:
