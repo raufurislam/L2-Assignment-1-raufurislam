@@ -15,7 +15,9 @@ formatString("Hello", false);  // Output: "hello"
  */
 
 function formatString(input: string, toUpper: boolean = true): string {
-  return toUpper ? input.toUpperCase() : input.toLowerCase();
+  const formatString = toUpper ? input.toUpperCase() : input.toLowerCase();
+  console.log(formatString);
+  return formatString;
 }
 // console.log(formatString("hello", false));
 
@@ -67,24 +69,106 @@ concatenateArrays(["a", "b"], ["c"]);       // Output: ["a", "b", "c"]
 concatenateArrays([1, 2], [3, 4], [5]);     // Output: [1, 2, 3, 4, 5]
  */
 
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  const concat = arrays.flat();
+  console.log(concat);
+  return concat;
+}
+// concatenateArrays(["a", "b"], ["c"]);
+// concatenateArrays([1, 2], [3, 4], [5]);
+
 /**
- *
+ * Problem 4:
+Description:
+
+Create a Vehicle class with private make and year properties and a getInfo() method.
+Create a Car class extending Vehicle, adding a private model property and a getModel() method.
+Example:
+
+const myCar = new Car("Toyota", 2020, "Corolla");
+myCar.getInfo();   // Output: "Make: Toyota, Year: 2020"
+myCar.getModel();  // Output: "Model: Corolla"
  */
 
 /**
- *
+ * Problem 5:
+Description: Write a function that takes a string | number and returns:
+
+The length if it's a string
+The number multiplied by 2 if it's a number
+Function Signature:
+
+function processValue(value: string | number): number
+Example:
+
+processValue("hello"); // Output: 5
+processValue(10);      // Output: 20
  */
 
 /**
- *
+ * Problem 6:
+Description: Define an interface Product and create a function to find the product with the highest price in an array. If the array is empty, return null.
+
+Interface & Function Signature:
+
+interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null
+Example:
+
+const products = [
+  { name: "Pen", price: 10 },
+  { name: "Notebook", price: 25 },
+  { name: "Bag", price: 50 }
+];
+
+getMostExpensiveProduct(products);  
+// Output: { name: "Bag", price: 50 }
+
  */
 
 /**
- *
+ * Problem 7:
+Description:
+
+Define an enum Day for the days of the week.
+Create a function that returns "Weekday" or "Weekend" based on the input day.
+Enum & Function Signature:
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday
+}
+
+function getDayType(day: Day): string
+Example:
+
+getDayType(Day.Monday);   // Output: "Weekday"
+getDayType(Day.Sunday);   // Output: "Weekend"
  */
 
 /**
- *
+ * Problem 8:
+Description: Create an async function that:
+
+Returns the square of a number after 1 second
+Rejects if the number is negative
+Function Signature:
+
+async function squareAsync(n: number): Promise<number>
+Example:
+
+squareAsync(4).then(console.log);        // Output after 1s: 16
+squareAsync(-3).catch(console.error);    // Output: Error: Negative number not allowed
+
  */
 
 /**
