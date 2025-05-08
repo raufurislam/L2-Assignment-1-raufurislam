@@ -1,15 +1,50 @@
-# L2-Assignment-1-raufurislam
+# 📘 L2-Assignment-1
 
-## 1. What are some differences between interfaces and types in TypeScript?
+## ` Question 6: How does TypeScript help in improving code quality and project maintainability?`
 
-## 2. What is the use of the keyof keyword in TypeScript? Provide an example.
+**Answer:**
 
-## 3. Explain the difference between any, unknown, and never types in TypeScript.
+TypeScript is a **superset of JavaScript**. It is an object-oriented programming language built on top of JavaScript with additional features. It adds powerful tools like **static typing**, **better editor support**, and **compile-time error checking** all of which help developers improve code quality and maintainability.
 
-## 4. What is the use of enums in TypeScript? Provide an example of a numeric and string enum.
+### TypeScript improves your code in many ways:
 
-## 5. What is type inference in TypeScript? Why is it helpful?
+✅ Catches errors while coding instead of waiting until runtime  
+✅ Shows helpful code suggestions and auto-complete in the editor  
+✅ Allows safe and easy code refactoring  
+✅ Handles big projects well that makes managing large codebases easier  
+✅ Supports large projects with better structure and scalability  
+✅ Ensures cleaner and more readable code with strong typing
 
-## 6. How does TypeScript help in improving code quality and project maintainability?
+TypeScript works like a smart helper. It makes sure your code is correct and easy to manage. This helps you build projects faster and with more confidence.
 
-## 7. Provide an example of using union and intersection types in TypeScript.
+---
+
+## ` Question 1: What are some differences between interfaces and types in TypeScript?`
+
+**Answer:**
+
+In TypeScript, both `interface` and `type` are tools to describe the shape of data that mainly objects but they work a bit differently and are useful in different cases.
+
+### `interface`
+
+- Used to **define the structure of an object** (what properties it should have).
+- Can be **extended** using the extends keyword
+- Mostly used when describing **object blueprints**.
+
+### `type`
+
+- Can be used for **object types** as well as **primitives** (string, number, etc.), **unions**, **intersections**, etc.
+- Helps to create **shortcuts or aliases** for complex types.
+
+🟨 **For Example:**
+
+```ts
+interface User {
+  name: string;
+  age: number;
+}
+
+type ID = number | string;
+```
+
+---

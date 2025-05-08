@@ -14,12 +14,14 @@ formatString("Hello", true);   // Output: "HELLO"
 formatString("Hello", false);  // Output: "hello"
  */
 
-function formatString(input: string, toUpper: boolean = true): string {
+function formatString(input: string, toUpper?: boolean = true): string {
   const formatString = toUpper ? input.toUpperCase() : input.toLowerCase();
   console.log(formatString);
   return formatString;
 }
-// console.log(formatString("hello", false));
+formatString("Hello"); // Output: "HELLO"
+formatString("Hello", true); // Output: "HELLO"
+formatString("Hello", false); // Output: "hello"
 
 /**
  * Problem 2:
