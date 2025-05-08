@@ -1,7 +1,12 @@
-function formatString(input: string, toUpper: boolean = true): string {
-  const formatString = toUpper ? input.toUpperCase() : input.toLowerCase();
-  console.log(formatString);
-  return formatString;
+function formatString(input: string, toUpper?: boolean): string {
+  if (toUpper || typeof toUpper === "undefined") {
+    const formatted = input.toUpperCase();
+    console.log(formatted);
+    return formatted;
+  }
+  const formatted = input.toLowerCase();
+  console.log(formatted);
+  return formatted;
 }
 
 function filterByRating(
