@@ -17,7 +17,7 @@ formatString("Hello", false);  // Output: "hello"
 function formatString(input: string, toUpper: boolean = true): string {
   return toUpper ? input.toUpperCase() : input.toLowerCase();
 }
-console.log(formatString("hello", false));
+// console.log(formatString("hello", false));
 
 /**
  * Problem 2:
@@ -38,8 +38,33 @@ filterByRating(books);
 // Output: [ { title: "Book A", rating: 4.5 }, { title: "Book C", rating: 5.0 } ]
  */
 
+function filterByRating(
+  items: { title: string; rating: number }[]
+): { title: string; rating: number }[] {
+  const filtered = items.filter((item) => item.rating >= 4);
+  console.log(filtered);
+  return filtered;
+}
+
+// const books = [
+//   { title: "Book A", rating: 4.5 },
+//   { title: "Book B", rating: 3.2 },
+//   { title: "Book C", rating: 5.0 },
+// ];
+
+// filterByRating(books);
+
 /**
- *
+ * Problem 3:
+Description: Create a generic function that concatenates multiple arrays of the same type using rest parameters.
+
+Function Signature:
+
+function concatenateArrays<T>(...arrays: T[][]): T[]
+Example:
+
+concatenateArrays(["a", "b"], ["c"]);       // Output: ["a", "b", "c"]
+concatenateArrays([1, 2], [3, 4], [5]);     // Output: [1, 2, 3, 4, 5]
  */
 
 /**
